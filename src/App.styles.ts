@@ -23,23 +23,25 @@ export const SContainer = styled.div`
 
 export const SSignatureContainer = styled.section`
 	width: 100%;
-	opacity: 85%;
-	margin-top: 0.8em;
+
+	margin-top: 2em;
 `
 export const STitle = styled.h1`
 	font-family: 'Yellowtail', cursive;
+	opacity: 75%;
 	margin: 0;
 	font-size: 64px;
-	color: #f7f7f7;
+	color: black;
 	user-select: none;
 	text-align: center;
 
 `;
 export const SSubtitle = styled.h5`
 	font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+	opacity: 55%;
 	margin: 0;
 	font-size: 18px;
-	color: #bccab8;
+	color: black;
 	user-select: none;
 	text-align: center;
 `;

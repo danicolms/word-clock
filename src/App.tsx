@@ -15,7 +15,7 @@ const defaultMatrix: IMatrix[] = [
 	{ letter: 'S', lit: false, position: [ 0, 1 ] },
 	{ letter: 'O', lit: false, position: [ 0, 2 ] },
 	{ letter: 'N', lit: false, position: [ 0, 3 ] },
-	{ letter: 'E', lit: false, position: [ 0, 4 ] },
+	{ letter: 'ƒ', lit: false, position: [ 0, 4 ] },
 	{ letter: 'L', lit: false, position: [ 0, 5 ] },
 	{ letter: 'A', lit: false, position: [ 0, 6 ] },
 	{ letter: 'S', lit: false, position: [ 0, 7 ] },
@@ -26,14 +26,14 @@ const defaultMatrix: IMatrix[] = [
 	{ letter: 'D', lit: false, position: [ 1, 0 ] },
 	{ letter: 'O', lit: false, position: [ 1, 1 ] },
 	{ letter: 'S', lit: false, position: [ 1, 2 ] },
-	{ letter: 'I', lit: false, position: [ 1, 3 ] },
+	{ letter: '‡', lit: false, position: [ 1, 3 ] },
 	{ letter: 'T', lit: false, position: [ 1, 4 ] },
 	{ letter: 'R', lit: false, position: [ 1, 5 ] },
 	{ letter: 'E', lit: false, position: [ 1, 6 ] },
 	{ letter: 'S', lit: false, position: [ 1, 7 ] },
-	{ letter: 'O', lit: false, position: [ 1, 8 ] },
-	{ letter: 'A', lit: false, position: [ 1, 9 ] },
-	{ letter: 'M', lit: false, position: [ 1, 10 ] },
+	{ letter: '›', lit: false, position: [ 1, 8 ] },
+	{ letter: '™', lit: false, position: [ 1, 9 ] },
+	{ letter: '¢', lit: false, position: [ 1, 10 ] },
 
 	{ letter: 'C', lit: false, position: [ 2, 0 ] },
 	{ letter: 'U', lit: false, position: [ 2, 1 ] },
@@ -51,7 +51,7 @@ const defaultMatrix: IMatrix[] = [
 	{ letter: 'E', lit: false, position: [ 3, 1 ] },
 	{ letter: 'I', lit: false, position: [ 3, 2 ] },
 	{ letter: 'S', lit: false, position: [ 3, 3 ] },
-	{ letter: 'A', lit: false, position: [ 3, 4 ] },
+	{ letter: '¤', lit: false, position: [ 3, 4 ] },
 	{ letter: 'S', lit: false, position: [ 3, 5 ] },
 	{ letter: 'I', lit: false, position: [ 3, 6 ] },
 	{ letter: 'E', lit: false, position: [ 3, 7 ] },
@@ -68,16 +68,16 @@ const defaultMatrix: IMatrix[] = [
 	{ letter: 'E', lit: false, position: [ 4, 6 ] },
 	{ letter: 'V', lit: false, position: [ 4, 7 ] },
 	{ letter: 'E', lit: false, position: [ 4, 8 ] },
-	{ letter: 'P', lit: false, position: [ 4, 9 ] },
-	{ letter: 'M', lit: false, position: [ 4, 10 ] },
+	{ letter: '®', lit: false, position: [ 4, 9 ] },
+	{ letter: '«', lit: false, position: [ 4, 10 ] },
 
-	{ letter: 'L', lit: false, position: [ 5, 0 ] },
-	{ letter: 'A', lit: false, position: [ 5, 1 ] },
+	{ letter: 'ß', lit: false, position: [ 5, 0 ] },
+	{ letter: '³', lit: false, position: [ 5, 1 ] },
 	{ letter: 'D', lit: false, position: [ 5, 2 ] },
 	{ letter: 'I', lit: false, position: [ 5, 3 ] },
 	{ letter: 'E', lit: false, position: [ 5, 4 ] },
 	{ letter: 'Z', lit: false, position: [ 5, 5 ] },
-	{ letter: 'S', lit: false, position: [ 5, 6 ] },
+	{ letter: '¶', lit: false, position: [ 5, 6 ] },
 	{ letter: 'O', lit: false, position: [ 5, 7 ] },
 	{ letter: 'N', lit: false, position: [ 5, 8 ] },
 	{ letter: 'C', lit: false, position: [ 5, 9 ] },
@@ -87,7 +87,7 @@ const defaultMatrix: IMatrix[] = [
 	{ letter: 'O', lit: false, position: [ 6, 1 ] },
 	{ letter: 'C', lit: false, position: [ 6, 2 ] },
 	{ letter: 'E', lit: false, position: [ 6, 3 ] },
-	{ letter: 'L', lit: false, position: [ 6, 4 ] },
+	{ letter: '×', lit: false, position: [ 6, 4 ] },
 	{ letter: 'Y', lit: false, position: [ 6, 5 ] },
 	{ letter: 'M', lit: false, position: [ 6, 6 ] },
 	{ letter: 'E', lit: false, position: [ 6, 7 ] },
@@ -95,7 +95,7 @@ const defaultMatrix: IMatrix[] = [
 	{ letter: 'O', lit: false, position: [ 6, 9 ] },
 	{ letter: 'S', lit: false, position: [ 6, 10 ] },
 
-	{ letter: 'O', lit: false, position: [ 7, 0 ] },
+	{ letter: 'đ', lit: false, position: [ 7, 0 ] },
 	{ letter: 'V', lit: false, position: [ 7, 1 ] },
 	{ letter: 'E', lit: false, position: [ 7, 2 ] },
 	{ letter: 'I', lit: false, position: [ 7, 3 ] },
@@ -135,23 +135,35 @@ const defaultMatrix: IMatrix[] = [
 export const App: React.FunctionComponent = () => {
 	const [ matrix, setMatrix ] = useState<IMatrix[]>([ ...defaultMatrix ]);
 
+	/**
+	 * This function gets the current time values from the
+	 * @danicolms/word-clock-utils library and sets the new matrix
+	 * with the characters that should be 'lit'.
+	 * 
+	 */
 	const updateMatrix = () => {
 		const positions = getCurrentTimePositions(new Date());
-		let _matrix: IMatrix[] = [ ...defaultMatrix ];
+		let matrix: IMatrix[] = JSON.parse(JSON.stringify([ ...defaultMatrix ]));
 
-		_matrix.forEach((entry: IMatrix, index: number) => {
+		matrix.forEach((entry: IMatrix, index: number) => {
 			positions.forEach((position: number[]) => {
 				if (entry.position.toString() === position.toString()) {
-					_matrix[index].lit = true;
+					matrix[index].lit = true;
 				}
 			});
 		});
 
-		setMatrix([ ..._matrix ]);
+		setMatrix(matrix);
 	};
+
+	/**
+	 * Repeat the updateMatrix function every
+	 * minute.
+	 */
 	useEffect(() => {
 		updateMatrix();
 		const interval = setInterval(updateMatrix, 60000);
+
 		return () => clearInterval(interval);
 	}, []);
 
@@ -171,8 +183,8 @@ export const App: React.FunctionComponent = () => {
 				})}
 			</Grid>
 			<SSignatureContainer>
-				<STitle> Word clock</STitle>
-				<SSubtitle> By @danicolms</SSubtitle>
+				<STitle> El reloj</STitle>
+				<SSubtitle> @danicolms</SSubtitle>
 			</SSignatureContainer>
 		</SContainer>
 	);
