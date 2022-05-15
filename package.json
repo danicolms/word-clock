@@ -1,6 +1,6 @@
 {
   "name": "@danicolms/word-clock",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The time in words.",
   "scope": "@danicolms",
   "homepage": "https://danicolms.github.io/word-clock",
@@ -23,7 +23,8 @@
   "scripts": {
     "start": "yarn parcel src/index.html",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "parcel build ./src/index.html",
+    "build": "parcel build --public-url '.' src/index.html",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
