@@ -13,5 +13,6 @@ opacity: ${(props: IStyledProps) => props.lit ? "100%" : "30%"};
 font-size: 30px;
 font-family: 'Space Mono', monospace;
 font-weight:  ${(props: IStyledProps) => props.lit ? "bold" : "regular"};
+justify-self: center;
 
 `;
