@@ -1,0 +1,29 @@
+{
+  "name": "@danicolms/word-clock",
+  "version": "1.0.0",
+  "description": "The time in words.",
+  "scope": "@danicolms",
+  "dependencies": {
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.4",
+    "parcel": "^2.5.0",
+    "typescript": "^4.6.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danicolms/word-clock.git"
+  },
+  "author": "@danicolms",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/danicolms/word-clock/issues"
+  },
+  "homepage": "https://github.com/danicolms/word-clock#readme"
+}

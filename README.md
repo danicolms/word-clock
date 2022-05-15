@@ -1,2 +1,2 @@
-# word-clock
- The time in words.
+# @danicolms/word-clock
+The time in words.
