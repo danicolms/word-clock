@@ -28719,11 +28719,11 @@ var getMinutes = function(date, matrix) {
     try {
         var minutes = date.getMinutes();
         var value = undefined;
-        if (minutes > 0 && minutes <= 10 || minutes > 45 && minutes <= 59) value = "diez";
-        else if (minutes > 10 && minutes <= 15 || minutes > 35 && minutes <= 45) value = "cuarto";
-        else if (minutes > 15 && minutes <= 20) value = "veinte";
-        else if (minutes > 20 && minutes <= 25 || minutes > 30 && minutes <= 35) value = "veinticinco";
-        else if (minutes > 25 && minutes <= 30) value = "media";
+        if (minutes >= 10 && minutes < 15 || minutes >= 50 && minutes <= 59) value = "diez";
+        else if (minutes >= 15 && minutes < 20 || minutes >= 45 && minutes < 50) value = "cuarto";
+        else if (minutes >= 20 && minutes < 25 || minutes >= 40 && minutes < 45) value = "veinte";
+        else if (minutes >= 25 && minutes < 30 || minutes >= 35 && minutes < 40) value = "veinticinco";
+        else if (minutes >= 30 && minutes < 35) value = "media";
         if (value) return (0, exports.getEntryPositionByParam)(matrix, value);
         else return;
     } catch (error) {
