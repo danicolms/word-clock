@@ -19,12 +19,13 @@ export const SContainer = styled.div`
     animation: ${gradientMovement} 30s ease infinite;
     opacity: 80%;
 
+
 `;
 
 export const SSignatureContainer = styled.section`
 	width: 100%;
 
-	margin-top: 2em;
+	margin-bottom: 2em;
 `
 export const STitle = styled.h1`
 	font-family: 'Yellowtail', cursive;
@@ -34,6 +35,7 @@ export const STitle = styled.h1`
 	color: black;
 	user-select: none;
 	text-align: center;
+	line-height: 1;
 
 `;
 export const SSubtitle = styled.h5`

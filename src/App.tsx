@@ -169,6 +169,10 @@ export const App: React.FunctionComponent = () => {
 
 	return (
 		<SContainer>
+			<SSignatureContainer>
+				<STitle> El reloj</STitle>
+				<SSubtitle> @danicolms</SSubtitle>
+			</SSignatureContainer>
 			<Grid>
 				{matrix.map((entry: IMatrix) => {
 					const { position, lit, letter } = entry;
@@ -182,10 +186,6 @@ export const App: React.FunctionComponent = () => {
 					);
 				})}
 			</Grid>
-			<SSignatureContainer>
-				<STitle> El reloj</STitle>
-				<SSubtitle> @danicolms</SSubtitle>
-			</SSignatureContainer>
 		</SContainer>
 	);
 };
