@@ -26026,6 +26026,28 @@ const App = ()=>{
     }, []);
     return /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_appStyles.SContainer, {
         children: [
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_appStyles.SSignatureContainer, {
+                children: [
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_appStyles.STitle, {
+                        children: " El reloj"
+                    }, void 0, false, {
+                        fileName: "src/App.tsx",
+                        lineNumber: 486,
+                        columnNumber: 5
+                    }, undefined),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_appStyles.SSubtitle, {
+                        children: " @danicolms"
+                    }, void 0, false, {
+                        fileName: "src/App.tsx",
+                        lineNumber: 487,
+                        columnNumber: 5
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/App.tsx",
+                lineNumber: 485,
+                columnNumber: 4
+            }, undefined),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_gridDefault.default, {
                 children: matrix1.map((entry)=>{
                     const { position , lit , letter  } = entry;
@@ -26038,35 +26060,13 @@ const App = ()=>{
                         letter: letter
                     }, Math.random(), false, {
                         fileName: "src/App.tsx",
-                        lineNumber: 492,
+                        lineNumber: 496,
                         columnNumber: 16
                     }, undefined);
                 })
             }, void 0, false, {
                 fileName: "src/App.tsx",
-                lineNumber: 485,
-                columnNumber: 4
-            }, undefined),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_appStyles.SSignatureContainer, {
-                children: [
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_appStyles.STitle, {
-                        children: " El reloj"
-                    }, void 0, false, {
-                        fileName: "src/App.tsx",
-                        lineNumber: 496,
-                        columnNumber: 5
-                    }, undefined),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_appStyles.SSubtitle, {
-                        children: " @danicolms"
-                    }, void 0, false, {
-                        fileName: "src/App.tsx",
-                        lineNumber: 497,
-                        columnNumber: 5
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/App.tsx",
-                lineNumber: 495,
+                lineNumber: 489,
                 columnNumber: 4
             }, undefined)
         ]
@@ -26129,7 +26129,7 @@ const SGrid = _styledComponentsDefault.default.section.withConfig({
     displayName: "styles__SGrid",
     componentId: "sc-ljs9b8-0"
 })([
-    "height:70%;width:80%;max-width:30em;max-height:30em;display:grid;grid-template-columns:repeat(11,1fr);grid-template-rows:repeat(9,1fr);"
+    "height:70%;width:80%;max-width:30em;max-height:30em;display:grid;grid-template-columns:repeat(11,1fr);grid-template-rows:repeat(9,1fr);border:1px solid rgba(255,255,255,0.3);border-radius:2px;padding:.5em;"
 ]);
 
 },{"styled-components":"1U3k6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1U3k6":[function(require,module,exports) {
@@ -28761,13 +28761,13 @@ const SSignatureContainer = _styledComponentsDefault.default.section.withConfig(
     displayName: "Appstyles__SSignatureContainer",
     componentId: "sc-1emetv0-1"
 })([
-    "width:100%;margin-top:2em;"
+    "width:100%;margin-bottom:2em;"
 ]);
 const STitle = _styledComponentsDefault.default.h1.withConfig({
     displayName: "Appstyles__STitle",
     componentId: "sc-1emetv0-2"
 })([
-    "font-family:'Yellowtail',cursive;opacity:75%;margin:0;font-size:64px;color:black;user-select:none;text-align:center;"
+    "font-family:'Yellowtail',cursive;opacity:75%;margin:0;font-size:64px;color:black;user-select:none;text-align:center;line-height:1;"
 ]);
 const SSubtitle = _styledComponentsDefault.default.h5.withConfig({
     displayName: "Appstyles__SSubtitle",
