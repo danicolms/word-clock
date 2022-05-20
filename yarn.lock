@@ -192,10 +192,10 @@
     "@babel/helper-validator-identifier" "^7.16.7"
     to-fast-properties "^2.0.0"
 
-"@danicolms/word-clock-utils@^1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@danicolms/word-clock-utils/-/word-clock-utils-1.0.6.tgz#33f337db26fc6db9cd72308d5c70c58e990e2cba"
-  integrity sha512-EwjRnaHHBaDpdpNpOnpawhRvnae05jjPh6/68oJtWAd2qAwWTNrzwNjB7tjiL2t17A9B2emEPfzr0+S5jBbw5g==
+"@danicolms/word-clock-utils@^1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@danicolms/word-clock-utils/-/word-clock-utils-1.0.7.tgz#acd52ae3a670fbee7cecde7868a2bd47dc40070c"
+  integrity sha512-WXZuWo2Or5Y+UednpzhrPXQtp3csBNRqcnq88uHMBUcd7eugSa2G+d8+JNyRkQbwH2rqicXeBzSL7oir+JlWWQ==
 
 "@emotion/is-prop-valid@^1.1.0":
   version "1.1.2"
