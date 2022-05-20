@@ -25993,7 +25993,7 @@ const defaultMatrix = [
         ]
     }
 ];
-console.log('Running v1.0.4 and @danicolms/word-clock-utils v1.0.5');
+console.log('Running v1.0.5 with @danicolms/word-clock-utils v1.0.6');
 const App = ()=>{
     _s();
     const [matrix1, setMatrix] = _react.useState([
@@ -28040,9 +28040,7 @@ var __spreadArray = this && this.__spreadArray || function(to, from, pack) {
     }
     return to.concat(ar || Array.prototype.slice.call(from));
 };
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
+exports.__esModule = true;
 exports.getCurrentTimePositions = void 0;
 var matrix_1 = require("./matrix");
 var utils_1 = require("./utils");
@@ -28062,9 +28060,7 @@ var __spreadArray = this && this.__spreadArray || function(to, from, pack) {
     }
     return to.concat(ar || Array.prototype.slice.call(from));
 };
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
+exports.__esModule = true;
 exports.matrix = void 0;
 var verbs = [
     {
@@ -28652,9 +28648,7 @@ exports.matrix = __spreadArray(__spreadArray(__spreadArray(__spreadArray(__sprea
 
 },{}],"jAc7h":[function(require,module,exports) {
 "use strict";
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
+exports.__esModule = true;
 exports.getMinutes = exports.getConjunction = exports.getHour = exports.getPronoun = exports.getVerb = exports.getEntryPositionByParam = exports.getTwelveHourFormatHour = void 0;
 var getTwelveHourFormatHour = function(date) {
     var hour = date.getHours();
