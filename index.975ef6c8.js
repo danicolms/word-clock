@@ -25993,7 +25993,7 @@ const defaultMatrix = [
         ]
     }
 ];
-console.log('Running v1.0.5 with @danicolms/word-clock-utils v1.0.6');
+console.log('💡 Running v1.0.6 with @danicolms/word-clock-utils v1.0.7');
 const App = ()=>{
     _s();
     const [matrix1, setMatrix] = _react.useState([
@@ -28704,6 +28704,7 @@ var getHour = function(date, matrix) {
 exports.getHour = getHour;
 var getConjunction = function(date, matrix) {
     try {
+        if (date.getMinutes() < 10) return [];
         return date.getMinutes() > 30 ? (0, exports.getEntryPositionByParam)(matrix, "menos") : (0, exports.getEntryPositionByParam)(matrix, "y");
     } catch (error) {
         console.error("Error: Couldn't find the conjunction for the selected date.");
@@ -28722,7 +28723,7 @@ var getMinutes = function(date, matrix) {
         else if (minutes >= 25 && minutes < 30 || minutes >= 35 && minutes < 40) value = "veinticinco";
         else if (minutes >= 30 && minutes < 35) value = "media";
         if (value) return (0, exports.getEntryPositionByParam)(matrix, value);
-        else return;
+        else return [];
     } catch (error) {
         console.error("Error: Couldn't find the minutes for the selected date.");
         console.error("----");
