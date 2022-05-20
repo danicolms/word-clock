@@ -1,7 +1,6 @@
 import styled from "styled-components"
 
 export const SGrid = styled.section`
-  height: 70%;
   width: 80%;
   max-width: 30em;
   max-height: 30em;

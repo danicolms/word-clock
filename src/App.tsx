@@ -132,6 +132,8 @@ const defaultMatrix: IMatrix[] = [
 	{ letter: 'O', lit: false, position: [ 9, 10 ] }
 ];
 
+console.log('Running v1.0.4 and @danicolms/word-clock-utils v1.0.5');
+
 export const App: React.FunctionComponent = () => {
 	const [ matrix, setMatrix ] = useState<IMatrix[]>([ ...defaultMatrix ]);
 

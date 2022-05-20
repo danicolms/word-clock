@@ -1,11 +1,11 @@
 {
   "name": "@danicolms/word-clock",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "The time in words.",
   "scope": "@danicolms",
   "homepage": "https://danicolms.github.io/word-clock",
   "dependencies": {
-    "@danicolms/word-clock-utils": "^1.0.4",
+    "@danicolms/word-clock-utils": "^1.0.5",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "styled-components": "^5.3.5"
