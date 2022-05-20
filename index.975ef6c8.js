@@ -26086,7 +26086,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./components/Grid":"fS3ic","@danicolms/word-clock-utils":"66Sg2","./App.styles":"3bOSH","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/GridItem":"hsvIf"}],"fS3ic":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./components/Grid":"fS3ic","./components/GridItem":"hsvIf","@danicolms/word-clock-utils":"66Sg2","./App.styles":"3bOSH","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"fS3ic":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$324e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -26129,7 +26129,7 @@ const SGrid = _styledComponentsDefault.default.section.withConfig({
     displayName: "styles__SGrid",
     componentId: "sc-ljs9b8-0"
 })([
-    "height:70%;width:80%;max-width:30em;max-height:30em;display:grid;grid-template-columns:repeat(11,1fr);grid-template-rows:repeat(9,1fr);border:1px solid rgba(255,255,255,0.3);border-radius:2px;padding:.5em;"
+    "width:80%;max-width:30em;max-height:30em;display:grid;grid-template-columns:repeat(11,1fr);grid-template-rows:repeat(9,1fr);border:1px solid rgba(255,255,255,0.3);border-radius:2px;padding:.5em;"
 ]);
 
 },{"styled-components":"1U3k6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1U3k6":[function(require,module,exports) {
@@ -27972,7 +27972,63 @@ function registerExportsForReactRefresh(module) {
     }
 }
 
-},{"react-refresh/runtime":"786KC"}],"66Sg2":[function(require,module,exports) {
+},{"react-refresh/runtime":"786KC"}],"hsvIf":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$f191 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$f191.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _styles = require("./styles");
+const GridItem = ({ position , lit , letter  })=>{
+    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_styles.SGridItem, {
+        position: position,
+        lit: lit,
+        children: letter
+    }, void 0, false, {
+        fileName: "src/components/GridItem/index.tsx",
+        lineNumber: 10,
+        columnNumber: 10
+    }, undefined);
+};
+_c = GridItem;
+exports.default = GridItem;
+var _c;
+$RefreshReg$(_c, "GridItem");
+
+  $parcel$ReactRefreshHelpers$f191.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./styles":"jvF5z","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jvF5z":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "SGridItem", ()=>SGridItem
+);
+var _styledComponents = require("styled-components");
+var _styledComponentsDefault = parcelHelpers.interopDefault(_styledComponents);
+const SGridItem = _styledComponentsDefault.default.div.withConfig({
+    displayName: "styles__SGridItem",
+    componentId: "sc-1882cuc-0"
+})([
+    "grid-column:",
+    " / span 1;grid-row:",
+    " / span 1;color:white;opacity:",
+    ";font-size:30px;font-family:'Space Mono',monospace;font-weight:",
+    ";justify-self:center;"
+], (props)=>props.position[1]
+, (props)=>props.position[0]
+, (props)=>props.lit ? "100%" : "20%"
+, (props)=>props.lit ? "bold" : "regular"
+);
+
+},{"styled-components":"1U3k6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"66Sg2":[function(require,module,exports) {
 "use strict";
 var __spreadArray = this && this.__spreadArray || function(to, from, pack) {
     if (pack || arguments.length === 2) {
@@ -28598,18 +28654,20 @@ exports.matrix = __spreadArray(__spreadArray(__spreadArray(__spreadArray(__sprea
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.getMinutes = exports.getConjunction = exports.getHour = exports.getPronoun = exports.getVerb = exports.getEntryPositionByParam = void 0;
+exports.getMinutes = exports.getConjunction = exports.getHour = exports.getPronoun = exports.getVerb = exports.getEntryPositionByParam = exports.getTwelveHourFormatHour = void 0;
 var getTwelveHourFormatHour = function(date) {
     var hour = date.getHours();
-    return hour < 12 ? hour : hour - 12;
+    var minutes = date.getMinutes();
+    if (minutes >= 35) return hour + 1 < 12 ? hour + 1 : hour + 1 - 12;
+    else return hour < 12 ? hour : hour - 12;
 };
+exports.getTwelveHourFormatHour = getTwelveHourFormatHour;
 var getEntryPositionByParam = function(matrix, word, hasNumber, number) {
     if (hasNumber === void 0) hasNumber = false;
     try {
         var entry1 = matrix.find(function(entry) {
             if (hasNumber) {
-                var twelveHourFormatNumber = number <= 12 ? number : number - 12;
-                if (entry.number === twelveHourFormatNumber) return entry;
+                if (entry.number === number) return entry;
             } else if (entry.word === word && entry.number === undefined) return entry;
             else return undefined;
         });
@@ -28621,7 +28679,7 @@ var getEntryPositionByParam = function(matrix, word, hasNumber, number) {
 exports.getEntryPositionByParam = getEntryPositionByParam;
 var getVerb = function(date, matrix) {
     try {
-        return getTwelveHourFormatHour(date) === 1 ? (0, exports.getEntryPositionByParam)(matrix, "es") : (0, exports.getEntryPositionByParam)(matrix, "son");
+        return (0, exports.getTwelveHourFormatHour)(date) === 1 ? (0, exports.getEntryPositionByParam)(matrix, "es") : (0, exports.getEntryPositionByParam)(matrix, "son");
     } catch (error) {
         console.error("Error: Couldn't find the verb for the selected date.");
         console.error("----");
@@ -28631,7 +28689,7 @@ var getVerb = function(date, matrix) {
 exports.getVerb = getVerb;
 var getPronoun = function(date, matrix) {
     try {
-        return getTwelveHourFormatHour(date) === 1 ? (0, exports.getEntryPositionByParam)(matrix, "la") : (0, exports.getEntryPositionByParam)(matrix, "las");
+        return (0, exports.getTwelveHourFormatHour)(date) === 1 ? (0, exports.getEntryPositionByParam)(matrix, "la") : (0, exports.getEntryPositionByParam)(matrix, "las");
     } catch (error) {
         console.error("Error: Couldn't find the pronoun for the selected date.");
         console.error("----");
@@ -28641,7 +28699,7 @@ var getPronoun = function(date, matrix) {
 exports.getPronoun = getPronoun;
 var getHour = function(date, matrix) {
     try {
-        return (0, exports.getEntryPositionByParam)(matrix, undefined, true, getTwelveHourFormatHour(date));
+        return (0, exports.getEntryPositionByParam)(matrix, undefined, true, (0, exports.getTwelveHourFormatHour)(date));
     } catch (error) {
         console.error("Error: Couldn't find the hour for the selected date.");
         console.error("----");
@@ -28719,62 +28777,6 @@ const SSubtitle = _styledComponentsDefault.default.h5.withConfig({
 })([
     "font-family:'IBM Plex Sans Thai Looped',sans-serif;opacity:55%;margin:0;font-size:18px;color:black;user-select:none;text-align:center;"
 ]);
-
-},{"styled-components":"1U3k6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hsvIf":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$f191 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$f191.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _styles = require("./styles");
-const GridItem = ({ position , lit , letter  })=>{
-    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_styles.SGridItem, {
-        position: position,
-        lit: lit,
-        children: letter
-    }, void 0, false, {
-        fileName: "src/components/GridItem/index.tsx",
-        lineNumber: 10,
-        columnNumber: 10
-    }, undefined);
-};
-_c = GridItem;
-exports.default = GridItem;
-var _c;
-$RefreshReg$(_c, "GridItem");
-
-  $parcel$ReactRefreshHelpers$f191.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./styles":"jvF5z","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jvF5z":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "SGridItem", ()=>SGridItem
-);
-var _styledComponents = require("styled-components");
-var _styledComponentsDefault = parcelHelpers.interopDefault(_styledComponents);
-const SGridItem = _styledComponentsDefault.default.div.withConfig({
-    displayName: "styles__SGridItem",
-    componentId: "sc-1882cuc-0"
-})([
-    "grid-column:",
-    " / span 1;grid-row:",
-    " / span 1;color:white;opacity:",
-    ";font-size:30px;font-family:'Space Mono',monospace;font-weight:",
-    ";justify-self:center;"
-], (props)=>props.position[1]
-, (props)=>props.position[0]
-, (props)=>props.lit ? "100%" : "20%"
-, (props)=>props.lit ? "bold" : "regular"
-);
 
 },{"styled-components":"1U3k6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lW6qc":[function() {},{}]},["kn9T2","7fmqN","8lqZg"], "8lqZg", "parcelRequirecf65")
 
