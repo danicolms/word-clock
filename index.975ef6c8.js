@@ -25993,6 +25993,7 @@ const defaultMatrix = [
         ]
     }
 ];
+console.log('Running v1.0.4 and @danicolms/word-clock-utils v1.0.5');
 const App = ()=>{
     _s();
     const [matrix1, setMatrix] = _react.useState([
@@ -26032,20 +26033,20 @@ const App = ()=>{
                         children: " El reloj"
                     }, void 0, false, {
                         fileName: "src/App.tsx",
-                        lineNumber: 486,
+                        lineNumber: 487,
                         columnNumber: 5
                     }, undefined),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_appStyles.SSubtitle, {
                         children: " @danicolms"
                     }, void 0, false, {
                         fileName: "src/App.tsx",
-                        lineNumber: 487,
+                        lineNumber: 488,
                         columnNumber: 5
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/App.tsx",
-                lineNumber: 485,
+                lineNumber: 486,
                 columnNumber: 4
             }, undefined),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_gridDefault.default, {
@@ -26060,19 +26061,19 @@ const App = ()=>{
                         letter: letter
                     }, Math.random(), false, {
                         fileName: "src/App.tsx",
-                        lineNumber: 496,
+                        lineNumber: 497,
                         columnNumber: 16
                     }, undefined);
                 })
             }, void 0, false, {
                 fileName: "src/App.tsx",
-                lineNumber: 489,
+                lineNumber: 490,
                 columnNumber: 4
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/App.tsx",
-        lineNumber: 484,
+        lineNumber: 485,
         columnNumber: 10
     }, undefined);
 };
