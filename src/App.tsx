@@ -3,7 +3,7 @@ import Grid from './components/Grid';
 import GridItem from './components/GridItem';
 import { getCurrentTimePositions } from '@danicolms/word-clock-utils';
 import { SContainer, SSignatureContainer, SSubtitle, STitle } from './App.styles';
-
+import Fade from 'react-reveal/Fade';
 export interface IMatrix {
 	position: number[];
 	lit: boolean;
@@ -132,7 +132,7 @@ const defaultMatrix: IMatrix[] = [
 	{ letter: 'O', lit: false, position: [ 9, 10 ] }
 ];
 
-console.log('💡 Running v1.0.6 with @danicolms/word-clock-utils v1.0.7');
+console.log('💡 Running v1.0.7 with @danicolms/word-clock-utils v1.0.7');
 
 export const App: React.FunctionComponent = () => {
 	const [ matrix, setMatrix ] = useState<IMatrix[]>([ ...defaultMatrix ]);
@@ -172,9 +172,12 @@ export const App: React.FunctionComponent = () => {
 	return (
 		<SContainer>
 			<SSignatureContainer>
-				<STitle> El reloj</STitle>
-				<SSubtitle> @danicolms</SSubtitle>
+				<Fade top>
+					<STitle> Word clock</STitle>
+					<SSubtitle> @danicolms</SSubtitle>
+				</Fade>
 			</SSignatureContainer>
+
 			<Grid>
 				{matrix.map((entry: IMatrix) => {
 					const { position, lit, letter } = entry;
